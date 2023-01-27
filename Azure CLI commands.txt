@@ -1,0 +1,13 @@
+az storage account create \
+  --resource-group learn-d6e33f84-6d8c-4c14-88c3-e03f8487d39d \
+  --location westus \
+  --sku Standard_LRS \
+  --name <name>
+  
+az storage account show-connection-string \
+  --resource-group learn-d6e33f84-6d8c-4c14-88c3-e03f8487d39d \
+  --query connectionString \
+  --name photoshareappkn95
+
+az storage container list --account-name photoshareappkn95 \
+--connection-string "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=photoshareappkn95;AccountKey=8c9B/7qWCokHbCLZIN7yUzLxwVJ6QsEUH0DZTdVgLs5plzFB7vMw5kNZYOnauwQM3S4N/GcNpOf8+AStZ2ytrQ==;BlobEndpoint=https://photoshareappkn95.blob.core.windows.net/;FileEndpoint=https://photoshareappkn95.file.core.windows.net/;QueueEndpoint=https://photoshareappkn95.queue.core.windows.net/;TableEndpoint=https://photoshareappkn95.table.core.windows.net/"
